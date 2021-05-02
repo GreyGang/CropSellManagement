@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Cart() {
+export default function Orders() {
   return (
     <div>
-      <h1>Welcome to cart</h1>
+      <h1>Welcome to Order</h1>
     </div>
   );
 }
