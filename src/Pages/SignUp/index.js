@@ -1,9 +1,10 @@
 import React from "react";
-
+import SignUpComp from "./Section/SignUp";
+import { SignUpWrapper } from "./index.style";
 export default function SignUp() {
   return (
-    <div>
-      <h1>Welcome to SignUp</h1>
-    </div>
+    <SignUpWrapper>
+      <SignUpComp />
+    </SignUpWrapper>
   );
 }

@@ -1,6 +1,7 @@
 import { Menu, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import icon from "../../../../Assets/Images/png/icon1.png";
+import { Icon } from "react-icons-kit";
 const NavBarDesktop = (props) => {
   const { leftItems, rightItems } = props;
 
@@ -11,15 +12,21 @@ const NavBarDesktop = (props) => {
           <Image size="mini" src={icon} />
         </Menu.Item>
         {leftItems.map((item) => (
-          <Menu.Item>
-            <Link to={item.to}>{item.content}</Link>
+          <Menu.Item key={item.id}>
+            <Link to={item.to}>
+              {item.content}
+              <Icon icon={item.icon} style={{ marginLeft: "0.5rem" }}></Icon>
+            </Link>
           </Menu.Item>
         ))}
 
         <Menu.Menu position="right">
           {rightItems.map((item) => (
-            <Menu.Item>
-              <Link to={item.to}>{item.content}</Link>
+            <Menu.Item key={item.id}>
+              <Link to={item.to}>
+                {item.content}
+                <Icon icon={item.icon} style={{ marginLeft: "0.5rem" }}></Icon>
+              </Link>
             </Menu.Item>
           ))}
         </Menu.Menu>
