@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "react-icons-kit";
 import { hipster2 } from "react-icons-kit/icomoon";
 import { LinkStyled, TextFieldCustom } from "./index.style";
@@ -41,6 +41,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUpComp() {
   const classes = useStyles();
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
+
+  const onChange = (name, value) => {
+    name(value);
+  };
+
+  const onSubmit = () => {
+    console.log(fname, lname, email, password, password2);
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -57,11 +70,12 @@ export default function SignUpComp() {
             <Grid item xs={12} sm={6}>
               <TextFieldCustom
                 autoComplete="fname"
-                name="firstName"
                 variant="outlined"
                 required
                 fullWidth
-                id="firstName"
+                onChange={(e) => {
+                  onChange(setFname, e.target.value);
+                }}
                 label="First Name"
                 autoFocus
               />
@@ -71,9 +85,10 @@ export default function SignUpComp() {
                 variant="outlined"
                 required
                 fullWidth
-                id="lastName"
+                onChange={(e) => {
+                  onChange(setLname, e.target.value);
+                }}
                 label="Last Name"
-                name="lastName"
                 autoComplete="lname"
               />
             </Grid>
@@ -82,9 +97,10 @@ export default function SignUpComp() {
                 variant="outlined"
                 required
                 fullWidth
-                id="email"
                 label="Email Address"
-                name="email"
+                onChange={(e) => {
+                  onChange(setEmail, e.target.value);
+                }}
                 autoComplete="email"
               />
             </Grid>
@@ -93,18 +109,32 @@ export default function SignUpComp() {
                 variant="outlined"
                 required
                 fullWidth
-                name="password"
                 label="Password"
                 type="password"
-                id="password"
+                onChange={(e) => {
+                  onChange(setPassword, e.target.value);
+                }}
+                autoComplete="current-password"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextFieldCustom
+                variant="outlined"
+                required
+                fullWidth
+                label="Confirm Password"
+                type="password"
+                onChange={(e) => {
+                  onChange(setPassword2, e.target.value);
+                }}
                 autoComplete="current-password"
               />
             </Grid>
           </Grid>
           <Button
-            type="submit"
             style={{ padding: "1rem 0" }}
             fullWidth
+            onClick={onSubmit}
             variant="contained"
             color="primary"
             className={classes.submit}
@@ -113,7 +143,7 @@ export default function SignUpComp() {
           </Button>
           <Grid container justify="center" style={{ margin: "2rem 0" }}>
             <Grid item>
-              <LinkStyled to="/login" variant="body2">
+              <LinkStyled to="/login">
                 Already have an account? Sign in
               </LinkStyled>
             </Grid>
