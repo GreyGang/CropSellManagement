@@ -4,7 +4,6 @@ import Navbar from "./Components/Navbar";
 import { GlobalStyles } from "./Assets/styles/GlobalStyles";
 import { MediaContextProvider, mediaStyles } from "./theme";
 import { leftItems, rightItems } from "./Assets/Data/NavbarData/index";
-import Button from "./Components/Button";
 function App() {
   return (
     <>
@@ -26,7 +25,6 @@ function App() {
             </Navbar>
           </Router>
           <GlobalStyles />
-          <Button>Demo Button</Button>
         </div>
       </MediaContextProvider>
     </>
