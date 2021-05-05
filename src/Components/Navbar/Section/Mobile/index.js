@@ -1,6 +1,8 @@
-import { Sidebar, Menu, Image, Icon } from "semantic-ui-react";
+import { Sidebar, Menu, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import icon from "../../../../Assets/Images/png/icon1.png";
+import { Icon } from "react-icons-kit";
+import { menu } from "react-icons-kit/iconic/menu";
 const NavBarMobile = (props) => {
   const {
     leftItems,
@@ -23,8 +25,11 @@ const NavBarMobile = (props) => {
           visible={visible}
         >
           {leftItems.map((item) => (
-            <Menu.Item>
-              <Link to={item.to}>{item.content}</Link>
+            <Menu.Item key={item.id}>
+              <Link to={item.to}>
+                {item.content}
+                <Icon icon={item.icon} style={{ marginLeft: "0.3rem" }}></Icon>
+              </Link>
             </Menu.Item>
           ))}
         </Sidebar>
@@ -38,12 +43,18 @@ const NavBarMobile = (props) => {
               <Image size="mini" src={icon} />
             </Menu.Item>
             <Menu.Item onClick={onToggle}>
-              <Icon name="sidebar" />
+              <Icon icon={menu} name="sidebar" />
             </Menu.Item>
             <Menu.Menu position="right">
               {rightItems.map((item) => (
-                <Menu.Item>
-                  <Link to={item.to}>{item.content}</Link>
+                <Menu.Item key={item.id}>
+                  <Link to={item.to}>
+                    {item.content}
+                    <Icon
+                      icon={item.icon}
+                      style={{ marginLeft: "0.3rem" }}
+                    ></Icon>
+                  </Link>
                 </Menu.Item>
               ))}
             </Menu.Menu>

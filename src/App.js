@@ -22,7 +22,6 @@ function App() {
                   ></Route>
                 ))}
               </Switch>
-              ;
             </Navbar>
           </Router>
           <GlobalStyles />
