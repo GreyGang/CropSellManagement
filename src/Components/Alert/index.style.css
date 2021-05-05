@@ -1,0 +1,21 @@
+.swal-button {
+    background-color: black; 
+color : white;
+border: 1px solid white;
+border-radius: 100px;
+padding : 0.7rem;
+font-size: 1rem;
+transition : 0.5s;
+cursor : pointer;
+margin : 0.3rem;
+font-weight : bold;
+}
+.swal-text {
+    color : black;
+  }
+.swal-modal {
+    background-color:white;
+    border: 3px solid black;
+  }
+  
+ 
