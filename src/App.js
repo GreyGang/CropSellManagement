@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import { GlobalStyles } from "./Assets/styles/GlobalStyles";
 import { MediaContextProvider, mediaStyles } from "./theme";
 import { leftItems, rightItems } from "./Assets/Data/NavbarData/index";
+import StickyFooter from "../src/Components/Footer/index";
 function App() {
   return (
     <>
@@ -23,6 +24,9 @@ function App() {
                 ))}
               </Switch>
             </Navbar>
+            <StickyFooter>
+
+            </StickyFooter>
           </Router>
           <GlobalStyles />
         </div>
