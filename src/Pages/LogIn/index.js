@@ -1,10 +1,3 @@
-// import React from "react";
-
-// export default function Login() {
-//   return <h1>Login Page</h1>;
-// }
-
-
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -42,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "black",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -50,6 +43,13 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    backgroundColor: "black",
+    "&:hover": {
+      backgroundColor: "#424242",
+    },
+  },
+  blackTextField: {
+    backgroundColor: "#424242",
   },
 }));
 
@@ -109,7 +109,7 @@ export default function Login() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/signup" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
