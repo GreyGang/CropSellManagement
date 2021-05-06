@@ -1,7 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+export const LoaderWrapper = styled.div`
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const StyledLoader = styled.div`
-@keyframes lds-roller {
+  @keyframes lds-roller {
     0% {
       transform: rotate(0deg);
     }
@@ -9,13 +16,13 @@ export const StyledLoader = styled.div`
       transform: rotate(360deg);
     }
   }
-&.lds-roller {
+  &.lds-roller {
     display: flex;
-    flex-direction : column;
+    flex-direction: column;
     position: relative;
     width: 80px;
     height: 80px;
-    margin : 25%;
+    margin: 25%;
   }
   &.lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -28,7 +35,7 @@ export const StyledLoader = styled.div`
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background:black;
+    background: black;
     margin: -4px 0 0 -4px;
   }
   &.lds-roller div:nth-child(1) {
@@ -39,21 +46,21 @@ export const StyledLoader = styled.div`
     left: 63px;
   }
   &.lds-roller div:nth-child(2) {
-    animation-delay: -0.090s;
+    animation-delay: -0.09s;
   }
   &.lds-roller div:nth-child(2):after {
     top: 68px;
     left: 56px;
   }
   &.lds-roller div:nth-child(3) {
-    animation-delay: -0.120s;
+    animation-delay: -0.12s;
   }
   &.lds-roller div:nth-child(3):after {
     top: 71px;
     left: 48px;
   }
   &.lds-roller div:nth-child(4) {
-    animation-delay: -0.160s;
+    animation-delay: -0.16s;
   }
   &.lds-roller div:nth-child(4):after {
     top: 72px;
