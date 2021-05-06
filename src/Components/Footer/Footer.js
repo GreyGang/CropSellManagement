@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Link } from "react-router-dom";
-import { MDBColStyled } from "./index.style";
+import { MDBColStyled } from "./Footer.style";
 const FooterPage = () => {
   return (
     <MDBFooter

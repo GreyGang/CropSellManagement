@@ -1,10 +1,10 @@
-import HomePage from "../../Pages/HomePage";
-import Cart from "../../Pages/Cart";
-import Error from "../../Pages/Error";
-import Item from "../../Pages/Item";
-import Profile from "../../Pages/Profile";
-import SignUp from "../../Pages/SignUp";
-import LogIn from "../../Pages/LogIn";
+import HomePage from "../../Pages/HomePage/HomePage";
+import Cart from "../../Pages/Cart/Cart";
+import Error from "../../Pages/Error/Error";
+import Item from "../../Pages/Item/Item";
+import Profile from "../../Pages/Profile/Profile";
+import SignUp from "../../Pages/SignUp/SignUp";
+import LogIn from "../../Pages/LogIn/Login";
 export const Routes = [
   {
     id: 1,
