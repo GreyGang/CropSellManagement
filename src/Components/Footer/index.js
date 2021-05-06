@@ -1,6 +1,7 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Link } from "react-router-dom";
+import { MDBColStyled } from "./index.style";
 const FooterPage = () => {
   return (
     <MDBFooter
@@ -25,15 +26,7 @@ const FooterPage = () => {
                 Get connected with us on social networks!
               </h6>
             </MDBCol>
-            <MDBCol
-              md="4"
-              lg="5"
-              className="text-center text-md-right"
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-              }}
-            >
+            <MDBColStyled md="6" lg="7" className="text-center text-md-right">
               <Link to="/" className="fb-ic ml-0">
                 <i className="fab fa-facebook-f white-text mr-lg-4"> </i>
               </Link>
@@ -49,7 +42,7 @@ const FooterPage = () => {
               <Link to="/" className="ins-ic">
                 <i className="fab fa-instagram white-text mr-lg-4"> </i>
               </Link>
-            </MDBCol>
+            </MDBColStyled>
           </MDBRow>
         </MDBContainer>
       </div>

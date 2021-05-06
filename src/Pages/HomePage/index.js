@@ -7,7 +7,6 @@ export default function HomePage() {
     <div>
       <h1>Welcome to HomePage</h1>
       <Button onClick={true}>Click Me</Button>
-      <h2>  </h2>
       <Card></Card>
     </div>
   );

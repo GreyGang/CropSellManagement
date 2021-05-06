@@ -1,4 +1,10 @@
-import { home3, cart, blocked, rocket, userPlus } from "react-icons-kit/icomoon";
+import {
+  home3,
+  cart,
+  blocked,
+  rocket,
+  userPlus,
+} from "react-icons-kit/icomoon";
 
 const leftItems = [
   { content: "Home", to: "", id: 1, icon: home3 },
