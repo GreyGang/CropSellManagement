@@ -15,7 +15,7 @@ export const StyledLoader = styled.div`
     position: relative;
     width: 80px;
     height: 80px;
-    margin:10%;
+    margin : 25%;
   }
   &.lds-roller div {
     animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
