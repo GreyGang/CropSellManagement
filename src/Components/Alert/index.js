@@ -11,6 +11,7 @@ export const Alert = () =>{
                text : "Yes"
            },
         },
+        closeOnClickOutside: false,
     })
     .then((value)=>{
         if(value){
