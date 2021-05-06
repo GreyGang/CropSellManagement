@@ -7,10 +7,16 @@ export default function LogIn() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    client.get("/").then((val) => {
-      console.log(val);
-      setLoading(false);
-    });
+    client
+      .get("/")
+      .then((val) => {
+        console.log(val);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
