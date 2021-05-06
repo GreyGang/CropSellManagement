@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import { GlobalStyles } from "./Assets/styles/GlobalStyles";
 import { MediaContextProvider, mediaStyles } from "./theme";
 import { leftItems, rightItems } from "./Assets/Data/NavbarData/index";
+import FooterPage from "../src/Components/Footer/index";
 function App() {
   return (
     <>
@@ -23,9 +24,12 @@ function App() {
                 ))}
               </Switch>
             </Navbar>
+            <FooterPage/>
           </Router>
+
           <GlobalStyles />
         </div>
+           
       </MediaContextProvider>
     </>
   );
