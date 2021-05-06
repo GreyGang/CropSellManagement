@@ -28,7 +28,7 @@ export default function Navbar(props) {
           visible={visible}
           children={children}
         >
-          <div style={{ marginTop: "3.6em" }}>{children}</div>
+          <div style={{ marginTop: "4.2em" }}>{children}</div>
         </NavBarMobile>
       </Media>
       <Media greaterThan="mobile">
@@ -37,7 +37,7 @@ export default function Navbar(props) {
           rightItems={rightItems}
           children={children}
         />
-        <div style={{ marginTop: "3.6em" }}>{children}</div>
+        <div style={{ marginTop: "4.2em" }}>{children}</div>
       </Media>
     </>
   );

@@ -27,7 +27,7 @@ export const Routes = [
   {
     id: 4,
     component: Item,
-    path: "/item",
+    path: "/item/:id",
     exact: true,
   },
   {
