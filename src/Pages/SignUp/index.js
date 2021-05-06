@@ -1,10 +1,10 @@
 import React from "react";
-import SignUpComp from "./Section/SignUp";
+import SignUpForm from "./Section/SignUpForm";
 import { SignUpWrapper } from "./index.style";
 export default function SignUp() {
   return (
     <SignUpWrapper>
-      <SignUpComp />
+      <SignUpForm />
     </SignUpWrapper>
   );
 }

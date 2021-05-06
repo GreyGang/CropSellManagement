@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUpComp() {
+export default function SignUpForm() {
   const classes = useStyles();
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");

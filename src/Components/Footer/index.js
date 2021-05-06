@@ -1,14 +1,19 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import { Link } from "react-router-dom";
-
 const FooterPage = () => {
   return (
     <MDBFooter
       color="blue-grey"
       className="page-footer font-small lighten-5 pt-0"
     >
-      <div style={{ backgroundColor: "#000000" }}>
+      <div
+        style={{
+          backgroundColor: "#000000",
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
         <MDBContainer>
           <MDBRow className="py-4 d-flex align-items-center">
             <MDBCol
@@ -20,7 +25,15 @@ const FooterPage = () => {
                 Get connected with us on social networks!
               </h6>
             </MDBCol>
-            <MDBCol md="6" lg="7" className="text-center text-md-right">
+            <MDBCol
+              md="4"
+              lg="5"
+              className="text-center text-md-right"
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+              }}
+            >
               <Link to="/" className="fb-ic ml-0">
                 <i className="fab fa-facebook-f white-text mr-lg-4"> </i>
               </Link>
