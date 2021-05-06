@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { Link } from "react-router-dom";
 
 const FooterPage = () => {
   return (
@@ -7,7 +8,7 @@ const FooterPage = () => {
       color="blue-grey"
       className="page-footer font-small lighten-5 pt-0"
     >
-      <div style={{ backgroundColor: "#21d192" }}>
+      <div style={{ backgroundColor: "#000000" }}>
         <MDBContainer>
           <MDBRow className="py-4 d-flex align-items-center">
             <MDBCol
@@ -20,21 +21,21 @@ const FooterPage = () => {
               </h6>
             </MDBCol>
             <MDBCol md="6" lg="7" className="text-center text-md-right">
-              <a className="fb-ic ml-0">
+              <Link to="/" className="fb-ic ml-0">
                 <i className="fab fa-facebook-f white-text mr-lg-4"> </i>
-              </a>
-              <a className="tw-ic">
+              </Link>
+              <Link to="/" className="tw-ic">
                 <i className="fab fa-twitter white-text mr-lg-4"> </i>
-              </a>
-              <a className="gplus-ic">
+              </Link>
+              <Link to="/" className="gplus-ic">
                 <i className="fab fa-google-plus-g white-text mr-lg-4"> </i>
-              </a>
-              <a className="li-ic">
+              </Link>
+              <Link to="/" className="li-ic">
                 <i className="fab fa-linkedin-in white-text mr-lg-4"> </i>
-              </a>
-              <a className="ins-ic">
+              </Link>
+              <Link to="/" className="ins-ic">
                 <i className="fab fa-instagram white-text mr-lg-4"> </i>
-              </a>
+              </Link>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
