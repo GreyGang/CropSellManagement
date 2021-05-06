@@ -14,8 +14,7 @@ export default function Cart() {
   },[])
   return (
     <div>
-      <h1>Welcome to cart</h1>
-      {post ? "" : <Loader/>}
+      {post ?  <h1>Welcome to cart</h1> : <Loader/>}
     </div>
   );
 }
