@@ -1,10 +1,10 @@
-import React from 'react';
-import {StyledLoader} from './index.style';
+import React from "react";
+import { StyledLoader, LoaderWrapper } from "./index.style";
 
-function Loader(){
-   return(
-       <center>
-    <StyledLoader className = "lds-roller">
+function Loader() {
+  return (
+    <LoaderWrapper>
+      <StyledLoader className="lds-roller">
         <div></div>
         <div></div>
         <div></div>
@@ -13,9 +13,9 @@ function Loader(){
         <div></div>
         <div></div>
         <div></div>
-    </StyledLoader>
-    </center>
-   );
+      </StyledLoader>
+    </LoaderWrapper>
+  );
 }
 
 export default Loader;

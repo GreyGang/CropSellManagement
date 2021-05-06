@@ -91,7 +91,7 @@ export default function LoginForm() {
               </LinkStyled>
             </Grid>
             <Grid item>
-              <LinkStyled to="/" variant="body2">
+              <LinkStyled to="/signup" variant="body2">
                 {"Don't have an account?"}
               </LinkStyled>
             </Grid>
