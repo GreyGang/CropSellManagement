@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Icon } from "react-icons-kit";
 import { hipster2 } from "react-icons-kit/icomoon";
-import { LinkStyled, TextFieldCustom } from "./index.style";
+import { LinkStyled, TextFieldCustom } from "./SignUp.style";
 import {
   makeStyles,
   Container,

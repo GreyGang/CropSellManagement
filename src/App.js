@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Routes } from "./Assets/Routes/Routes";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import { GlobalStyles } from "./Assets/styles/GlobalStyles";
-import { MediaContextProvider, mediaStyles } from "./theme";
-import { leftItems, rightItems } from "./Assets/Data/NavbarData/index";
-import FooterPage from "../src/Components/Footer/index";
+import { MediaContextProvider, mediaStyles } from "./theme/theme";
+import { leftItems, rightItems } from "./Assets/Data/NavbarData/NavbarData";
+import FooterPage from "../src/Components/Footer/Footer";
 function App() {
   return (
     <>
@@ -24,12 +24,11 @@ function App() {
                 ))}
               </Switch>
             </Navbar>
-            <FooterPage/>
+            <FooterPage />
           </Router>
 
           <GlobalStyles />
         </div>
-           
       </MediaContextProvider>
     </>
   );

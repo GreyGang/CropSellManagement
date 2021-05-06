@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Media } from "../../theme";
-import NavBarMobile from "./Section/Mobile";
-import NavBarDesktop from "./Section/Desktop";
+import { Media } from "../../theme/theme";
+import NavBarMobile from "./Section/Mobile/Mobile";
+import NavBarDesktop from "./Section/Desktop/Desktop";
 
 export default function Navbar(props) {
   const [visible, isVisible] = useState(false);
