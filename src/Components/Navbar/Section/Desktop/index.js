@@ -13,7 +13,7 @@ const NavBarDesktop = (props) => {
         </Menu.Item>
         {leftItems.map((item) => (
           <Menu.Item key={item.id}>
-            <Link to={item.to}>
+            <Link to={item.to} exact={item.exact}>
               {item.content}
               <Icon icon={item.icon} style={{ marginLeft: "0.5rem" }}></Icon>
             </Link>
@@ -23,7 +23,7 @@ const NavBarDesktop = (props) => {
         <Menu.Menu position="right">
           {rightItems.map((item) => (
             <Menu.Item key={item.id}>
-              <Link to={item.to}>
+              <Link to={item.to} exact={item.exact}>
                 {item.content}
                 <Icon icon={item.icon} style={{ marginLeft: "0.5rem" }}></Icon>
               </Link>
