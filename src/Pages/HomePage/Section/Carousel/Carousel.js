@@ -1,6 +1,9 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { CarouselStyled } from "./Carousel.style";
+import img1 from "../../../../Assets/Images/jpg/carousel1.jpg";
+import img2 from "../../../../Assets/Images/jpg/carousel2.jpg";
+import img3 from "../../../../Assets/Images/jpg/carousel3.jpg";
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -20,7 +23,7 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
+          src={img1}
           alt="First slide"
           style={{
             width: "100vw",
@@ -37,7 +40,7 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          src={img2}
           alt="Second slide"
           style={{
             width: "100vw",
@@ -55,7 +58,7 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100 "
-          src="https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80"
+          src={img3}
           alt="Third slide"
           style={{
             width: "100vw",

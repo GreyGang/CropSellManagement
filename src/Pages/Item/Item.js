@@ -3,7 +3,7 @@ import Loader from "../../Components/Loader/Loader";
 import { useParams } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
 import LeftPart from "./Section/LeftPart/LeftPart";
-
+import RightPart from "./Section/RightPart/RightPart";
 export default function Item() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
@@ -36,7 +36,7 @@ export default function Item() {
               padding: "0",
             }}
           >
-            {id}
+            <RightPart id={id} />
           </Grid.Column>
         </Grid>
       </div>
