@@ -40,7 +40,9 @@ const NavBarMobile = (props) => {
         >
           <Menu fixed="top" inverted>
             <Menu.Item>
-              <Image size="mini" src={icon} />
+              <Link to="/">
+                <Image size="mini" src={icon} />
+              </Link>
             </Menu.Item>
             <Menu.Item onClick={onToggle}>
               <Icon icon={menu} name="sidebar" />

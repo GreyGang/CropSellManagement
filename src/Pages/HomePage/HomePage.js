@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Loader from "../../Components/Loader/Loader";
 import { HomeWrapper } from "./HomePage.style";
-import Carousel from './../../Components/Carousel/Carousel';
+import Carousel from "./Section/Carousel/Carousel";
+import Quote from "./Section/Quote/Quote";
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -15,7 +16,8 @@ export default function HomePage() {
   } else {
     return (
       <HomeWrapper>
-          <Carousel/>
+        <Carousel />
+        <Quote />
       </HomeWrapper>
     );
   }
