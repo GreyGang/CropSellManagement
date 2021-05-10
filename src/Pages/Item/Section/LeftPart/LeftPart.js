@@ -1,18 +1,21 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
+import img1 from "../../../../Assets/Images/jpg/img1.jpg";
+import img2 from "../../../../Assets/Images/jpg/img2.jpg";
+import img3 from "../../../../Assets/Images/jpg/img3.jpg";
 
 const images = [
   {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
+    original: img1,
+    thumbnail: img1,
   },
   {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
+    original: img2,
+    thumbnail: img2,
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
+    original: img3,
+    thumbnail: img3,
   },
 ];
 
