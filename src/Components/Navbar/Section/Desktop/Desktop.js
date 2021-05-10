@@ -9,7 +9,9 @@ const NavBarDesktop = (props) => {
     <>
       <Menu fixed="top" inverted>
         <Menu.Item>
-          <Image size="mini" src={icon} />
+          <Link to="/">
+            <Image size="mini" src={icon} />
+          </Link>
         </Menu.Item>
         {leftItems.map((item) => (
           <Menu.Item key={item.id}>
