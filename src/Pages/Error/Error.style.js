@@ -5,7 +5,7 @@ export const H1 = styled.h1`
 `;
 
 export const PageWrapper = styled.div`
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
