@@ -21,6 +21,7 @@ export const StyledButton = styled.button`
   }
   &:active {
     transform: translateY(6px);
+    color : black;
   }
   &:focus {
     border: none;
