@@ -11,6 +11,15 @@ export const StyledButton = styled.button`
   transition: 0.5s;
   cursor: pointer;
   margin: 0.4rem;
+
+  & a {
+    color: white;
+  }
+
+  &:hover a {
+    color: black;
+  }
+
   &:hover {
     color: black;
     transform: scale(1.08);
@@ -21,7 +30,7 @@ export const StyledButton = styled.button`
   }
   &:active {
     transform: translateY(6px);
-    color : black;
+    color: black;
   }
   &:focus {
     border: none;

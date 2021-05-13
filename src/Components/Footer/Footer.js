@@ -52,10 +52,7 @@ const FooterPage = () => {
             <h6 className="text-uppercase font-weight-bold">
               <strong>Company name</strong>
             </h6>
-            <hr
-              className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
-              style={{ width: "60px" }}
-            />
+
             <p>
               Here you can use rows and columns here to organize your footer
               content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -65,10 +62,7 @@ const FooterPage = () => {
             <h6 className="text-uppercase font-weight-bold">
               <strong>Products</strong>
             </h6>
-            <hr
-              className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
-              style={{ width: "60px" }}
-            />
+
             <p>
               <a href="#!" className="dark-grey-text">
                 MDBootstrap
@@ -94,10 +88,7 @@ const FooterPage = () => {
             <h6 className="text-uppercase font-weight-bold">
               <strong>Useful links</strong>
             </h6>
-            <hr
-              className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
-              style={{ width: "60px" }}
-            />
+
             <p>
               <a href="#!" className="dark-grey-text">
                 Your Account
@@ -123,10 +114,7 @@ const FooterPage = () => {
             <h6 className="text-uppercase font-weight-bold">
               <strong>Contact</strong>
             </h6>
-            <hr
-              className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
-              style={{ width: "60px" }}
-            />
+
             <p>
               <i className="fa fa-home mr-3" /> New York, NY 10012, US
             </p>
