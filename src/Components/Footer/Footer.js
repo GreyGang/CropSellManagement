@@ -50,7 +50,7 @@ const FooterPage = () => {
         <MDBRow className="mt-3">
           <MDBCol md="3" lg="4" xl="3" className="mb-4 dark-grey-text">
             <h6 className="text-uppercase font-weight-bold">
-              <strong>Company name</strong>
+              <strong style={{ fontWeight: "600" }}>Company name</strong>
             </h6>
 
             <p>
@@ -60,7 +60,7 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="2" lg="2" xl="2" className="mb-4 dark-grey-text">
             <h6 className="text-uppercase font-weight-bold">
-              <strong>Products</strong>
+              <strong style={{ fontWeight: "600" }}>Products</strong>
             </h6>
 
             <p>
@@ -86,7 +86,7 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="3" lg="2" xl="2" className="mb-4 dark-grey-text">
             <h6 className="text-uppercase font-weight-bold">
-              <strong>Useful links</strong>
+              <strong style={{ fontWeight: "600" }}>Useful links</strong>
             </h6>
 
             <p>
@@ -112,7 +112,7 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="4" lg="3" xl="3" className="mb-4 dark-grey-text">
             <h6 className="text-uppercase font-weight-bold">
-              <strong>Contact</strong>
+              <strong style={{ fontWeight: "600" }}>Contact</strong>
             </h6>
 
             <p>
