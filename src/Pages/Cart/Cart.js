@@ -5,11 +5,7 @@ export default function Cart() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts/1")
-      .then((response) => response.json())
-      .then(() => {
-        setLoading(false);
-      });
+    setLoading(false);
   }, []);
 
   if (loading) {
