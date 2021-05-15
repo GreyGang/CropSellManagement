@@ -1,31 +1,29 @@
-import React, { useEffect, useState } from "react";
-import Loader from "../../Components/Loader/Loader";
+import React, { useEffect } from "react";
 import { LogInWrapper } from "./Login.style";
 import LogInForm from "./section/LogInForm/LogInForm";
-import client from "./../../Utils/Connection";
-export default function LogIn() {
-  const [loading, setLoading] = useState(true);
+import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
+
+function LogIn(props) {
+  const history = useHistory();
 
   useEffect(() => {
-    client
-      .get("/")
-      .then((val) => {
-        console.log(val);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
-  }, []);
+    const { isAuthenticated } = props.auth;
+    console.log(isAuthenticated);
+    if (isAuthenticated) {
+      history.push("/");
+    }
+  }, [props.auth, history]);
 
-  if (loading) {
-    return <Loader />;
-  } else {
-    return (
-      <LogInWrapper>
-        <LogInForm />
-      </LogInWrapper>
-    );
-  }
+  return (
+    <LogInWrapper>
+      <LogInForm />
+    </LogInWrapper>
+  );
 }
+
+const statetoprops = (state) => {
+  return state;
+};
+
+export default connect(statetoprops, null)(LogIn);

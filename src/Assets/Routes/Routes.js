@@ -5,6 +5,7 @@ import Item from "../../Pages/Item/Item";
 import Profile from "../../Pages/Profile/Profile";
 import SignUp from "../../Pages/SignUp/SignUp";
 import LogIn from "../../Pages/LogIn/Login";
+import LogOut from "../../Pages/Logout/Logout";
 export const Routes = [
   {
     id: 1,
@@ -46,6 +47,12 @@ export const Routes = [
     id: 6,
     component: LogIn,
     path: "/login",
+    exact: true,
+  },
+  {
+    id: 7,
+    component: LogOut,
+    path: "/logout",
     exact: true,
   },
 ];

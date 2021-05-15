@@ -3,7 +3,11 @@ import { Routes } from "./Assets/Routes/Routes";
 import Navbar from "./Components/Navbar/Navbar";
 import { GlobalStyles } from "./Assets/styles/GlobalStyles";
 import { MediaContextProvider, mediaStyles } from "./theme/theme";
-import { leftItems, rightItems } from "./Assets/Data/NavbarData/NavbarData";
+import {
+  leftItems,
+  rightItems,
+  rightItemsLogin,
+} from "./Assets/Data/NavbarData/NavbarData";
 import FooterPage from "../src/Components/Footer/Footer";
 function App() {
   return (
@@ -12,7 +16,11 @@ function App() {
       <MediaContextProvider>
         <div>
           <Router>
-            <Navbar leftItems={leftItems} rightItems={rightItems}>
+            <Navbar
+              leftItems={leftItems}
+              rightItems={rightItems}
+              rightItemsLogin={rightItemsLogin}
+            >
               <Switch>
                 {Routes.map((item) => (
                   <Route

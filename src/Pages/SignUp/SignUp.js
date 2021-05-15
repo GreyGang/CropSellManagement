@@ -1,32 +1,28 @@
-import React, { useEffect, useState } from "react";
-import Loader from "../../Components/Loader/Loader";
+import React, { useEffect } from "react";
 import SignUpForm from "./Section/SignUpForm/SignUpForm";
 import { SignUpWrapper } from "./SignUp.style";
-import client from "./../../Utils/Connection";
+import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 
-export default function SignUp() {
-  const [loading, setLoading] = useState(true);
+function SignUp(props) {
+  const history = useHistory();
 
   useEffect(() => {
-    client
-      .get("/")
-      .then((val) => {
-        console.log(val);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
-  }, []);
+    const { isAuthenticated } = props.auth;
+    if (isAuthenticated) {
+      history.push("/");
+    }
+  }, [props.auth, history]);
 
-  if (loading) {
-    return <Loader />;
-  } else {
-    return (
-      <SignUpWrapper>
-        <SignUpForm />
-      </SignUpWrapper>
-    );
-  }
+  return (
+    <SignUpWrapper>
+      <SignUpForm />
+    </SignUpWrapper>
+  );
 }
+
+const statetoprops = (state) => {
+  return state;
+};
+
+export default connect(statetoprops, null)(SignUp);
