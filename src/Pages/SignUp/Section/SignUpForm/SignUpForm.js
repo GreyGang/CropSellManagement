@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Icon } from "react-icons-kit";
 import { hipster2 } from "react-icons-kit/icomoon";
 import { LinkStyled, TextFieldCustom } from "./SignUp.style";
+import { connect } from "react-redux";
 import {
   makeStyles,
   Container,
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUpForm() {
+function SignUpForm(props) {
   const classes = useStyles();
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -80,7 +81,7 @@ export default function SignUpForm() {
       });
 
       cookies.set("token", data.data.token, { path: "/" });
-      console.log(data);
+      props.login(data.data);
     } catch (err) {
       swal("Something went wrong try again!!");
     }
@@ -189,3 +190,18 @@ export default function SignUpForm() {
     );
   }
 }
+
+const propstostate = (dispatch) => {
+  return {
+    login: (data) => {
+      dispatch({
+        type: "LOGIN",
+        payload: {
+          data,
+        },
+      });
+    },
+  };
+};
+
+export default connect(null, propstostate)(SignUpForm);

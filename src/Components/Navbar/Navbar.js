@@ -3,10 +3,21 @@ import { Media } from "../../theme/theme";
 import NavBarMobile from "./Section/Mobile/Mobile";
 import NavBarDesktop from "./Section/Desktop/Desktop";
 import { connect } from "react-redux";
+import Cookies from "universal-cookie";
+import client from "../../Utils/Connection";
+const cookies = new Cookies();
 function Navbar(props) {
   const [visible, isVisible] = useState(false);
-  const { children, leftItems, rightItems, rightItemsLogin } = props;
+  const { children, leftItems, rightItems, rightItemsLogin, login } = props;
   const [logged, setLogged] = useState(false);
+
+  useEffect(() => {
+    const token = cookies.get("token");
+    console.log(token);
+    client.get("/auth/user").then((res) => {
+      login(res.data);
+    });
+  }, [login]);
 
   useEffect(() => {
     const { isAuthenticated } = props.auth;
@@ -53,4 +64,17 @@ const statetoprops = (state) => {
   return state;
 };
 
-export default connect(statetoprops, null)(Navbar);
+const propstostate = (dispatch) => {
+  return {
+    login: (data) => {
+      dispatch({
+        type: "LOGIN",
+        payload: {
+          data,
+        },
+      });
+    },
+  };
+};
+
+export default connect(statetoprops, propstostate)(Navbar);
