@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Loading from "../../../../Components/Loader/Loader";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -12,14 +12,19 @@ import Container from "@material-ui/core/Container";
 import { LinkStyled, TextFieldCustom } from "./LoginForm.style";
 import client from "../../../../Utils/Connection";
 import swal from "sweetalert";
+import { connect } from "react-redux";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
-export default function LoginForm() {
+function LoginForm(props) {
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log(props);
+  }, [props]);
 
   const onChangeInput = (setI, val) => {
     setI(val);
@@ -40,7 +45,7 @@ export default function LoginForm() {
       });
 
       cookies.set("token", data.data.token, { path: "/" });
-      console.log(data);
+      props.login(data.data);
     } catch (err) {
       swal("Something went wrong try again!!");
     }
@@ -144,3 +149,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#424242",
   },
 }));
+
+const propstostate = (dispatch) => {
+  return {
+    login: (data) => {
+      dispatch({
+        type: "LOGIN",
+        payload: {
+          data,
+        },
+      });
+    },
+  };
+};
+
+export default connect(null, propstostate)(LoginForm);

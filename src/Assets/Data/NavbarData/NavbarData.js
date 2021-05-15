@@ -16,4 +16,8 @@ const rightItems = [
   { content: "SignUp", to: "signup", id: 2, icon: userPlus },
 ];
 
-export { leftItems, rightItems };
+const rightItemsLogin = [
+  { content: "Logout", to: "logout", id: 1, icon: rocket },
+];
+
+export { leftItems, rightItems, rightItemsLogin };

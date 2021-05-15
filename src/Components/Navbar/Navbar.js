@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Media } from "../../theme/theme";
 import NavBarMobile from "./Section/Mobile/Mobile";
 import NavBarDesktop from "./Section/Desktop/Desktop";
-
-export default function Navbar(props) {
+import { connect } from "react-redux";
+function Navbar(props) {
   const [visible, isVisible] = useState(false);
-  const { children, leftItems, rightItems } = props;
+  const { children, leftItems, rightItems, rightItemsLogin } = props;
+  const [logged, setLogged] = useState(false);
+
+  useEffect(() => {
+    const { isAuthenticated } = props.auth;
+    setLogged(isAuthenticated);
+  }, [props.auth]);
 
   const handleToggle = () => {
     isVisible(!visible);
@@ -24,7 +30,7 @@ export default function Navbar(props) {
           leftItems={leftItems}
           onPusherClick={handlePusher}
           onToggle={handleToggle}
-          rightItems={rightItems}
+          rightItems={logged ? rightItemsLogin : rightItems}
           visible={visible}
           children={children}
         >
@@ -34,7 +40,7 @@ export default function Navbar(props) {
       <Media greaterThan="mobile">
         <NavBarDesktop
           leftItems={leftItems}
-          rightItems={rightItems}
+          rightItems={logged ? rightItemsLogin : rightItems}
           children={children}
         />
         <div style={{ marginTop: "4.2em" }}>{children}</div>
@@ -42,3 +48,9 @@ export default function Navbar(props) {
     </>
   );
 }
+
+const statetoprops = (state) => {
+  return state;
+};
+
+export default connect(statetoprops, null)(Navbar);
