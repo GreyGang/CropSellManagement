@@ -6,6 +6,7 @@ import Profile from "../../Pages/Profile/Profile";
 import SignUp from "../../Pages/SignUp/SignUp";
 import LogIn from "../../Pages/LogIn/Login";
 import LogOut from "../../Pages/Logout/Logout";
+import AddItem from "../../Pages/AddItem/AddItem";
 export const Routes = [
   {
     id: 1,
@@ -53,6 +54,12 @@ export const Routes = [
     id: 7,
     component: LogOut,
     path: "/logout",
+    exact: true,
+  },
+  {
+    id: 8,
+    component: AddItem,
+    path: "/addItem",
     exact: true,
   },
 ];

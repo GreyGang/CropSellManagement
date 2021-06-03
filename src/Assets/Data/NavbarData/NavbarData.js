@@ -4,11 +4,11 @@ import {
   blocked,
   rocket,
   userPlus,
+  cool2,
 } from "react-icons-kit/icomoon";
 
 const leftItems = [
   { content: "Home", to: "", id: 1, icon: home3 },
-  { content: "Cart", to: "cart", id: 2, icon: cart },
   { content: "Error", to: "error", id: 3, icon: blocked },
 ];
 const rightItems = [
@@ -20,4 +20,9 @@ const rightItemsLogin = [
   { content: "Logout", to: "logout", id: 1, icon: rocket },
 ];
 
-export { leftItems, rightItems, rightItemsLogin };
+const leftItemsLogin = [
+  { content: "Add Item", to: "addItem", id: 1, icon: cool2 },
+  { content: "Cart", to: "cart", id: 2, icon: cart },
+];
+
+export { leftItems, rightItems, rightItemsLogin, leftItemsLogin };
