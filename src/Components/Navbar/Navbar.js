@@ -8,7 +8,14 @@ import client from "../../Utils/Connection";
 const cookies = new Cookies();
 function Navbar(props) {
   const [visible, isVisible] = useState(false);
-  const { children, leftItems, rightItems, rightItemsLogin, login } = props;
+  const {
+    children,
+    leftItems,
+    rightItems,
+    rightItemsLogin,
+    leftItemsLogin,
+    login,
+  } = props;
   const [logged, setLogged] = useState(false);
 
   useEffect(() => {
@@ -38,7 +45,7 @@ function Navbar(props) {
     <>
       <Media at="mobile">
         <NavBarMobile
-          leftItems={leftItems}
+          leftItems={logged ? leftItemsLogin : leftItems}
           onPusherClick={handlePusher}
           onToggle={handleToggle}
           rightItems={logged ? rightItemsLogin : rightItems}
@@ -50,7 +57,7 @@ function Navbar(props) {
       </Media>
       <Media greaterThan="mobile">
         <NavBarDesktop
-          leftItems={leftItems}
+          leftItems={logged ? leftItemsLogin : leftItems}
           rightItems={logged ? rightItemsLogin : rightItems}
           children={children}
         />

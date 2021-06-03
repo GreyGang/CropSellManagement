@@ -7,6 +7,7 @@ import {
   leftItems,
   rightItems,
   rightItemsLogin,
+  leftItemsLogin,
 } from "./Assets/Data/NavbarData/NavbarData";
 import FooterPage from "../src/Components/Footer/Footer";
 function App() {
@@ -20,6 +21,7 @@ function App() {
               leftItems={leftItems}
               rightItems={rightItems}
               rightItemsLogin={rightItemsLogin}
+              leftItemsLogin={leftItemsLogin}
             >
               <Switch>
                 {Routes.map((item) => (
