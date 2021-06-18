@@ -7,6 +7,8 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import LogIn from "../../Pages/LogIn/Login";
 import LogOut from "../../Pages/Logout/Logout";
 import AddItem from "../../Pages/AddItem/AddItem";
+import Shop from "../../Pages/Shop/Shop";
+
 export const Routes = [
   {
     id: 1,
@@ -60,6 +62,12 @@ export const Routes = [
     id: 8,
     component: AddItem,
     path: "/addItem",
+    exact: true,
+  },
+  {
+    id: 9,
+    component: Shop,
+    path: "/shop",
     exact: true,
   },
 ];
