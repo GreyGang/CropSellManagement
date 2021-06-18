@@ -5,7 +5,6 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import img1 from "../../Assets/Images/jpg/crop.jpg";
 
 const useStyles = makeStyles({
   root: {
@@ -13,7 +12,13 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard({
+  img_url,
+  about,
+  type,
+  price,
+  quantity,
+}) {
   const classes = useStyles();
 
   return (
@@ -21,26 +26,20 @@ export default function ImgMediaCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="crop"
-          height="140"
-          image={img1}
+          alt="image here bro"
+          height="100%"
+          image={img_url}
           title="crop"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Crop
-          </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry\'s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            {about}
           </Typography>
           <Typography gutterBottom variant="h5" component="h2">
-            Category
+            {type}
           </Typography>
           <Typography gutterBottom variant="h5" component="h2">
-            Price
+            ₹ {price} for {quantity} kg
           </Typography>
         </CardContent>
       </CardActionArea>

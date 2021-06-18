@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 import { AddItemWrapper } from "./AddItem.style";
-
+import client from "../../Utils/Connection";
+import { useHistory } from "react-router-dom";
 export default function AddItem() {
   const options = [
     { text: "Spices", value: "spices" },
@@ -27,8 +28,25 @@ export default function AddItem() {
     setter(value);
   };
 
+  const history = useHistory();
   const handleSubmit = () => {
-    console.log(type, title, price, quantity, image, about);
+    console.log(type, title, price, quantity, about, image);
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("price", price);
+    formData.append("quantity", quantity);
+    formData.append("type", type);
+    formData.append("about", about);
+    formData.append("photo", image);
+    client
+      .post("/items/newItem", formData)
+      .then((res) => {
+        console.log(res);
+        history.push("/shop");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (

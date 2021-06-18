@@ -5,6 +5,8 @@ import {
   rocket,
   userPlus,
   cool2,
+  joomla,
+  yelp,
 } from "react-icons-kit/icomoon";
 
 const leftItems = [
@@ -21,8 +23,10 @@ const rightItemsLogin = [
 ];
 
 const leftItemsLogin = [
-  { content: "Add Item", to: "addItem", id: 1, icon: cool2 },
-  { content: "Cart", to: "cart", id: 2, icon: cart },
+  { content: "Profile", to: "profile", id: 1, icon: yelp },
+  { content: "Add Item", to: "addItem", id: 2, icon: cool2 },
+  { content: "Cart", to: "cart", id: 3, icon: cart },
+  { content: "ShopNow", to: "shop", id: 4, icon: joomla },
 ];
 
 export { leftItems, rightItems, rightItemsLogin, leftItemsLogin };
