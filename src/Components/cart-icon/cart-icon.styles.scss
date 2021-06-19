@@ -1,0 +1,22 @@
+.cart-icon {
+  width: 55px;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+          filter: invert(100%);
+  .shopping-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .item-count {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    bottom: 12px;
+  }
+}

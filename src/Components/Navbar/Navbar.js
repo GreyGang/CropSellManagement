@@ -5,6 +5,7 @@ import NavBarDesktop from "./Section/Desktop/Desktop";
 import { connect } from "react-redux";
 import Cookies from "universal-cookie";
 import client from "../../Utils/Connection";
+import CartIcon from "../cart-icon/cart-icon.component";
 const cookies = new Cookies();
 function Navbar(props) {
   const [visible, isVisible] = useState(false);
@@ -54,6 +55,8 @@ function Navbar(props) {
         >
           <div style={{ marginTop: "4.2em" }}>{children}</div>
         </NavBarMobile>
+        <CartIcon />
+     
       </Media>
       <Media greaterThan="mobile">
         <NavBarDesktop
@@ -61,7 +64,11 @@ function Navbar(props) {
           rightItems={logged ? rightItemsLogin : rightItems}
           children={children}
         />
+        
+
         <div style={{ marginTop: "4.2em" }}>{children}</div>
+
+        
       </Media>
     </>
   );

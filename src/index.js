@@ -11,12 +11,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import store from "./Utils/Store";
+import { store, persistor } from "./Utils/Store";
 import { Provider } from "react-redux";
-
+import { PersistGate } from "redux-persist/es/integration/react";
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <PersistGate persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>,
   document.getElementById("root")
 );
