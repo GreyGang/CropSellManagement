@@ -2,8 +2,12 @@ import { Menu, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import icon from "../../../../Assets/Images/png/icon1.png";
 import { Icon } from "react-icons-kit";
+import CartIcon from '../../../cart-icon/cart-icon.component.jsx';
+import CartDropdown from "../../../cart-dropdown/cart-dropdown.component";
+import { connect } from "react-redux";
+
 const NavBarDesktop = (props) => {
-  const { leftItems, rightItems } = props;
+  const { leftItems, rightItems ,hidden} = props;
 
   return (
     <>
@@ -31,10 +35,17 @@ const NavBarDesktop = (props) => {
               </Link>
             </Menu.Item>
           ))}
+          <CartIcon />
+          {
+            hidden ? null:
+          <CartDropdown />
+          }
         </Menu.Menu>
       </Menu>
     </>
   );
 };
-
-export default NavBarDesktop;
+const mapStateToProps =({cart: {hidden}})=>({
+  hidden
+})
+export default connect(mapStateToProps)(NavBarDesktop);

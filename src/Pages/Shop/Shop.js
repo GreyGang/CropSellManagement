@@ -27,10 +27,21 @@ function Shop() {
           flexWrap: "wrap",
           justifyContent: "center",
           alignItems: "center",
+          margin: "3%",
         }}
       >
         {data.map((item) => (
-          <Card {...item} />
+          <>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                margin: "2%",
+              }}
+            >
+              <Card key={item.id} item={item} />
+            </div>
+          </>
         ))}
       </div>
     );

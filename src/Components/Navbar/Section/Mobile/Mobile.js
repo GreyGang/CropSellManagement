@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import icon from "../../../../Assets/Images/png/icon1.png";
 import { Icon } from "react-icons-kit";
 import { menu } from "react-icons-kit/iconic/menu";
+import CartIcon from '../../../cart-icon/cart-icon.component.jsx';
+import {connect} from 'react-redux'
 const NavBarMobile = (props) => {
   const {
     leftItems,
@@ -59,6 +61,8 @@ const NavBarMobile = (props) => {
                   </Link>
                 </Menu.Item>
               ))}
+              <CartIcon />
+            
             </Menu.Menu>
           </Menu>
           {children}
@@ -67,5 +71,7 @@ const NavBarMobile = (props) => {
     </>
   );
 };
-
-export default NavBarMobile;
+const mapStateToProps = ({ cart: { hidden } }) => ({
+  hidden,
+});
+export default  connect(mapStateToProps)(NavBarMobile);
