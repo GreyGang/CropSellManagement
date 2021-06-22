@@ -15,8 +15,8 @@ export default function Profile() {
     client.get("auth/user").then((user) => {
       setUser(user.data);
       console.log(user.data);
+      setLoading(false);
     });
-    setLoading(false);
   }, []);
 
   if (loading) {
