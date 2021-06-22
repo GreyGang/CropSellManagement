@@ -53,10 +53,9 @@ function Navbar(props) {
           visible={visible}
           children={children}
         >
-          <div style={{ marginTop: "4.2em" }}>{children}</div>
+          <div style={{ marginTop: "3.6em" }}>{children}</div>
         </NavBarMobile>
         <CartIcon />
-     
       </Media>
       <Media greaterThan="mobile">
         <NavBarDesktop
@@ -64,11 +63,8 @@ function Navbar(props) {
           rightItems={logged ? rightItemsLogin : rightItems}
           children={children}
         />
-        
 
-        <div style={{ marginTop: "4.2em" }}>{children}</div>
-
-        
+        <div style={{ marginTop: "3.6em" }}>{children}</div>
       </Media>
     </>
   );
