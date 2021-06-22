@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "../../Components/Loader/Loader";
 import { connect } from "react-redux";
 import "./Cart.styles.scss";
-import  CheckoutItem  from "../../Components/checkout-item/checkout-item.component";
+import CheckoutItem from "../../Components/checkout-item/checkout-item.component";
 const Cart = ({ cartItems, total }) => {
   const [loading, setLoading] = useState(true);
 
@@ -32,9 +32,11 @@ const Cart = ({ cartItems, total }) => {
             <span>Remove</span>
           </div>
         </div>
-        {cartItems.map((cartItem) => <CheckoutItem key={cartItem._id} cartItem={cartItem} />)}
+        {cartItems.map((cartItem) => (
+          <CheckoutItem key={cartItem._id} cartItem={cartItem} />
+        ))}
         <div className="total">
-          <span>TOTAL: ${total}</span>
+          <span>TOTAL: ₹{total}</span>
         </div>
       </div>
     );
